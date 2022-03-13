@@ -6,7 +6,6 @@ import 'tailwindcss/tailwind.css';
 import { getPosts } from '../services';
 
 const Home: NextPage<{ posts: GetPostResponse[] }> = (props) => {
-  console.log(props.posts);
   return (
     <div className='container mx-auto px-10 mb-8'>
       <Head>

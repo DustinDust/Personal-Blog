@@ -54,7 +54,7 @@ const PostWidget: React.FC<{
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </p>
               <p className='text-gray-700 text-base hover:text-yellow-700 hover:transition-all transition-all hover:scale-105'>
-                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                <Link href={`/post/${post.slug}`}>{post.title}</Link>
               </p>
             </div>
           </div>

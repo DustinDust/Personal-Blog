@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getCategories } from '../services';
-import { Category } from '../types';
+import type { Category as CategoryType } from '../types';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import Category from './Category';
 
 const Categories = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [categories, setCategories] = useState<CategoryType[]>([]);
   useEffect(() => {
     getCategories()
       .then((results) => {
-        console.log(results);
         setCategories(results);
       })
       .catch((err) => {
@@ -23,16 +23,7 @@ const Categories = () => {
         Categories
       </h3>
       {categories.map((category) => {
-        return (
-          <div key={category.id}>
-            <Link href={`/categories/${category.slug}`} passHref>
-              <div className='flex flex-row hover:text-yellow-700 after:duration-200 after:contents after:absolute relative after:h-px after:scale-x-0 after:hover:scale-100 after:origin-left after:transition-all transition-all after:w-full after:-bottom-1 after:left-0 after:bg-yellow-700 items-center gap-6 mb-8 cursor-pointer hover:scale-105'>
-                <MdKeyboardArrowRight />
-                <p>{category.name}</p>
-              </div>
-            </Link>
-          </div>
-        );
+        return <Category key={category.id} category={category} />;
       })}
     </div>
   );
