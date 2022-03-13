@@ -1,5 +1,5 @@
 import { request, gql } from "graphql-request";
-import { RecentPostResponse } from "../types";
+import { ThumbnailPostResponse } from "../types";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPCMS_ENDPOINT || '';
 
@@ -7,7 +7,7 @@ const getRecentPost = async () => {
   const query = gql`
     query GetPostDetail{
       posts(
-        orderBy: createdAt_ASC
+        orderBy: createdAt_DESC
         last: 3
       ) {
         title
@@ -19,7 +19,7 @@ const getRecentPost = async () => {
       }
     }
   `;
-  const result:{posts: RecentPostResponse[]} = await request<{posts: RecentPostResponse[]}>(graphqlAPI, query);
+  const result:{posts: ThumbnailPostResponse[]} = await request<{posts: ThumbnailPostResponse[]}>(graphqlAPI, query);
   return result.posts;
 }
 export default getRecentPost;

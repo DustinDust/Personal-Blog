@@ -15,7 +15,7 @@ const PostCard: React.FC<{ post: PostNode }> = (props) => {
           className='absolute object-contain lg:object-cover h-auto w-full shadow-lg rounded-t-lg lg:rounded-lg'
         />
       </div>
-      <h1 className='transition duration-300 hover:transition hover:duration-300 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold'>
+      <h1 className='transition duration-300 hover:transition hover:duration-300 text-center mb-8 cursor-pointer hover:text-yellow-700 text-3xl font-semibold'>
         <Link href={`/post/${props.post.slug}`}>{props.post.title}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
@@ -34,7 +34,7 @@ const PostCard: React.FC<{ post: PostNode }> = (props) => {
         <div className='font-medium text-gray-700'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 inline mr-2 text-pink-500'
+            className='h-6 w-6 inline mr-2 text-yellow-700'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -54,7 +54,7 @@ const PostCard: React.FC<{ post: PostNode }> = (props) => {
       </p>
       <div className='text-center'>
         <Link href={`/post/${props.post.slug}`} passHref>
-          <span className='text-lg cursor-pointer bg-pink-600 px-8 py-3 rounded-full inline-block text-white transform hover:-translate-y-2 transition duration-300 font-bold '>
+          <span className='text-lg cursor-pointer bg-yellow-700 px-8 py-3 rounded-full inline-block text-white transform hover:-translate-y-2 transition duration-300 font-bold '>
             Read more
           </span>
         </Link>
