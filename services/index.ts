@@ -3,3 +3,5 @@ export { default as getRecentPosts } from './getRecentPosts';
 export { default as getCategories } from './getCategories';
 export { default as getPostDetail } from './getPostDetail';
 export { default as getPaths } from './getPaths';
+export { default as submitComment } from './submitComment';
+export { default as getComments } from './getComments';
