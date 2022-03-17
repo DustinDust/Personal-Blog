@@ -5,3 +5,4 @@ export { default as getPostDetail } from './getPostDetail';
 export { default as getPaths } from './getPaths';
 export { default as submitComment } from './submitComment';
 export { default as getComments } from './getComments';
+export { default as getCategoryPost } from './getCateogryPost';

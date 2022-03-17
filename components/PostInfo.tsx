@@ -2,6 +2,7 @@ import React from 'react';
 import { PostDetailResponse } from '../types';
 import Image from 'next/image';
 import moment from 'moment';
+import Category from './Category';
 
 const PostInfo: React.FC<{ post: PostDetailResponse }> = (props) => {
   return (
@@ -18,7 +19,13 @@ const PostInfo: React.FC<{ post: PostDetailResponse }> = (props) => {
           {props.post.author.name}
         </p>
       </div>
-      <div className='font-medium text-gray-700'>
+      <div className='text-sm text-gray-600 w-full lg:w-auto lg:mb-0 mb-4 lg:max-w-xs align-top mr-8 flex flex-row items-center justify-center'>
+        <span className='text-center'>
+          Categories:{' '}
+          {props.post.categories.map((category) => category.name).join(', ')}
+        </span>
+      </div>
+      <div className='font-medium text-gray-700 mr-8'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6 inline mr-2 text-yellow-700'
