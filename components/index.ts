@@ -1,9 +1,9 @@
 export { default as PostCard } from './PostCard';
-export { default as Categories } from './Categories';
+export { default as Categories } from './Categories/Categories';
 export { default as PostWidget } from './PostWidget';
-export { default as Header } from './Header';
-export { default as Layout } from './Layout';
+export { default as Header } from './Layout/Header';
+export { default as Layout } from './Layout/Layout';
 export { default as PostDetail } from './PostDetail';
-export { default as CommentForm } from './CommentForm';
-export { default as Comments } from './Comments';
+export { default as CommentForm } from './Comments/CommentForm';
+export { default as Comments } from './Comments/Comments';
 export { default as Author } from './Author';

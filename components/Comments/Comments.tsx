@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import parse from 'html-react-parser';
-import { Comment } from '../types';
-import { getComments } from '../services';
+import { Comment } from '../../types';
+import { getComments } from '../../services';
 
 const Comments: React.FC<{ slug: string }> = (props) => {
   const [comments, setComments] = useState<Comment[]>([]);

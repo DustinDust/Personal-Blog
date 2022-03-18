@@ -6,3 +6,4 @@ export { default as getPaths } from './getPaths';
 export { default as submitComment } from './submitComment';
 export { default as getComments } from './getComments';
 export { default as getCategoryPost } from './getCateogryPost';
+export { default as getFeaturedPost } from './getFeaturedPost';

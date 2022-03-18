@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Category } from '../types';
+import { Category } from '../../types';
 import { useState, useEffect } from 'react';
-import { getCategories } from '../services';
+import { getCategories } from '../../services';
 
 const Header = () => {
   const [categories, setCategories] = useState<Category[]>([]);

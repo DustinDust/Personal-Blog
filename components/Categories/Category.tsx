@@ -1,4 +1,4 @@
-import { Category } from '../types';
+import { Category } from '../../types';
 import Link from 'next/link';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
