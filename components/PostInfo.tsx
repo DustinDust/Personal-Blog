@@ -2,7 +2,6 @@ import React from 'react';
 import { PostDetailResponse } from '../types';
 import Image from 'next/image';
 import moment from 'moment';
-import Category from './Category';
 
 const PostInfo: React.FC<{ post: PostDetailResponse }> = (props) => {
   return (
