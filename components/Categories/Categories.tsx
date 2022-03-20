@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getCategories } from '../../services';
-import { Category as CategoryType } from '../../types';
+import type { Category as CategoryType } from '../../types';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import Category from './Category';
 
