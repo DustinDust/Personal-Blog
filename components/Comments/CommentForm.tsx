@@ -4,9 +4,9 @@ import React, {
   useRef,
   TextareaHTMLAttributes,
 } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import { submitComment } from '../services';
-import { Comment } from '../types';
+import { toast } from 'react-toastify';
+import { submitComment } from '../../services';
+import { Comment } from '../../types';
 
 const PostDetail: React.FC<{ slug: string }> = (props) => {
   const [error, setError] = useState<string | undefined>('');

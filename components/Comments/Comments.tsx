@@ -32,7 +32,7 @@ const Comments: React.FC<{ slug: string }> = (props) => {
               <p className='mb-4'>
                 <span className='font-semibold'>{comment.name}</span> on{' '}
                 {moment(comment.createdAt!).format('MMM DD, YYYY')}
-                <span className='font-light text-gray-700 ml-4'>
+                <span className='md:inline-block lg:inline-block hidden font-light text-gray-700 ml-4'>
                   ({comment.email})
                 </span>
               </p>

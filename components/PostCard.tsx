@@ -15,7 +15,7 @@ const PostCard: React.FC<{ post: PostNode }> = (props) => {
           className='absolute object-contain lg:object-cover h-auto w-full shadow-lg rounded-t-lg lg:rounded-lg'
         />
       </div>
-      <h1 className='transition duration-300 hover:transition hover:duration-300 text-center mb-8 cursor-pointer hover:text-yellow-700 text-3xl font-semibold'>
+      <h1 className='transition duration-300 hover:transition hover:duration-300 text-center mb-8 cursor-pointer hover:text-yellow-700 text-2xl px-4  lg:text-3xl md:text-3xl font-semibold'>
         <Link href={`/post/${props.post.slug}`}>{props.post.title}</Link>
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
@@ -49,7 +49,7 @@ const PostCard: React.FC<{ post: PostNode }> = (props) => {
           <span>{moment(props.post.createdAt).format('MMM DD, YYYY')}</span>
         </div>
       </div>
-      <p className='text-center text-lg text-gray-700 font-normal px-4 lg:p-20 mb-8'>
+      <p className='text-center lg:text-lg text-gray-700 font-normal px-8 text-sm lg:p-20 mb-8'>
         {props.post.excerpt}
       </p>
       <div className='text-center'>
