@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { getCategories } from '../../services';
 import type { Category as CategoryType } from '../../types';
-import { MdKeyboardArrowRight } from 'react-icons/md';
-import Category from './Category';
+import CategoryLink from './Category';
 
 const Categories = () => {
   const [categories, setCategories] = useState<CategoryType[]>([]);
@@ -23,7 +21,7 @@ const Categories = () => {
         Categories
       </h3>
       {categories.map((category) => {
-        return <Category key={category.id} category={category} />;
+        return <CategoryLink key={category.id} category={category} />;
       })}
     </div>
   );

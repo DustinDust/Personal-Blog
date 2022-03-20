@@ -1,8 +1,8 @@
-import { Category } from '../../types';
+import type { Category } from '../../types';
 import Link from 'next/link';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
-const Category: React.FC<{ category: Category }> = (props) => {
+const CategoryLink: React.FC<{ category: Category }> = (props) => {
   return (
     <div>
       <Link href={`/categories/${props.category.slug}`} passHref>
@@ -14,4 +14,4 @@ const Category: React.FC<{ category: Category }> = (props) => {
     </div>
   );
 };
-export default Category;
+export default CategoryLink;
